@@ -1,0 +1,181 @@
+
+注解：
+@Documented –注解是否将包含在JavaDoc中
+@Retention –什么时候使用该注解
+@Target –注解用于什么地方
+@Inherited – 是否允许子类继承该注解
+
+@Documented–一个简单的Annotations标记注解，表示是否将注解信息添加在java文档中。
+
+@Retention– 定义该注解的生命周期。
+
+RetentionPolicy.SOURCE – 在编译阶段丢弃。这些注解在编译结束之后就不再有任何意义，所以它们不会写入字节码。@Override, @SuppressWarnings都属于这类注解。
+
+RetentionPolicy.CLASS – 在类加载的时候丢弃。在字节码文件的处理中有用。注解默认使用这种方式。
+
+RetentionPolicy.RUNTIME– 始终不会丢弃，运行期也保留该注解，因此可以使用反射机制读取该注解的信息。我们自定义的注解通常使用这种方式。
+
+@Target – 表示该注解用于什么地方。如果不明确指出，该注解可以放在任何地方。以下是一些可用的参数。需要说明的是：属性的注解是兼容的，如果你想给7个属性都添加注解，仅仅排除一个属性，那么你需要在定义target包含所有的属性。
+
+ElementType.TYPE:用于描述类、接口或enum声明
+ElementType.FIELD:用于描述实例变量
+ElementType.METHOD
+ElementType.PARAMETER
+ElementType.CONSTRUCTOR
+ElementType.LOCAL_VARIABLE
+ElementType.ANNOTATION_TYPE 另一个注释
+ElementType.PACKAGE 用于记录java文件的package信息
+
+@Inherited – 定义该注释和子类的关系
+
+
+注解的可用的类型包括以下几种：所有基本类型、String、Class、enum、Annotation、以上类型的数组形式。元素不能有不确定的值，即要么有默认值，要么在使用注解的时候提供元素的值。
+而且元素不能使用null作为默认值。注解在只有一个元素且该元素的名称是value的情况下，在使用注解的时候可以省略“value=”，直接写需要的值即可
+
+
+http请求分析
+https://www.cnblogs.com/engeng/articles/5959335.html
+
+http请求常见写法
+https://blog.csdn.net/u010197591/article/details/51441399
+
+
+spring aop 
+http://blog.csdn.net/javazejian/article/details/56267036
+
+maven---分层
+http://www.cnblogs.com/xdp-gacl/p/4242221.html
+https://www.cnblogs.com/kabi/p/8420967.html   --配置详解
+
+https://www.sojson.com/blog/168.html   ---Maven的Mirror和Repository 的详细讲解
+
+
+集群环境的安装及kafka的使用教程
+http://blog.csdn.net/trigl/article/list?viewmode=contents
+
+kafka
+https://www.cnblogs.com/hei12138/p/7805475.html
+https://www.w3cschool.cn/apache_kafka/apache_kafka_fundamentals.html
+kafka环境安装
+https://newsn.net/say/win10-bigdata-kafka.html
+
+主题发出的消息会发往所有的消费者组，而每一个消费者组下面可以有很多消费者实例，这条消息只会被他们中的一个消费掉
+
+require.js
+Javascript模块化编程（一）：模块的写法------http://www.ruanyifeng.com/blog/2012/10/javascript_module.html
+Javascript模块化编程（二）：AMD规范 ------http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html
+Javascript模块化编程（三）：require.js的用法-------http://www.ruanyifeng.com/blog/2012/11/require_js.html?bsh_bid=230697246
+
+
+
+Quartz ---定时任务框架
+http://blog.csdn.net/u010648555/article/details/54863394
+
+MD5:
+https://www.cnblogs.com/hihtml5/p/6064999.html
+
+
+设计模式
+https://www.cnblogs.com/cr330326/p/5627658.html
+
+
+cas单点登录
+http://www.cnblogs.com/vhua/p/cas_1.html
+
+linux 查看端口占用
+https://www.cnblogs.com/CEO-H/p/7794306.html
+
+linux 文件管理命令
+https://www.cnblogs.com/vamei/archive/2012/09/13/2682519.html
+
+枚举(好文，博主很多好文章)
+https://blog.csdn.net/javazejian/article/details/71333103
+synchronized关键字
+https://blog.csdn.net/javazejian/article/details/72828483
+
+
+
+kettle 介绍
+https://www.cnblogs.com/hapjin/p/4578738.html
+https://blog.csdn.net/qq_21178933/article/details/54729613
+https://www.cnblogs.com/lsy-blogs/p/8268318.html
+
+软件授权协议
+https://www.zhihu.com/question/19962512
+
+python 系列文章
+Pip 安装使用
+https://www.cnblogs.com/xiaxj/p/7091322.html
+
+引用模块 包信息
+https://www.cnblogs.com/airven/p/4959195.html
+
+
+
+hbase 
+https://www.cnblogs.com/vincentzh/p/6055850.html
+
+
+kettle github address
+https://github.com/pentaho/pentaho-kettle 
+
+
+10.13.82.109  root hik12345+ 
+10.33.43.133  root Hik12345
+
+
+在centos下用yum install xxx
+
+yum和apt-get的区别
+一般来说著名的linux系统基本上分两大类： 
+1.RedHat系列：Redhat、Centos、Fedora等 
+2.Debian系列：Debian、Ubuntu等 
+RedHat 系列 
+1 常见的安装包格式 rpm包,安装rpm包的命令是“rpm -参数” 
+2 包管理工具 yum 
+3 支持tar包 
+Debian系列 
+1 常见的安装包格式 deb包,安装deb包的命令是“dpkg -参数” 
+2 包管理工具 apt-get 
+3 支持tar包
+
+
+
+
+host    all             all             0.0.0.0/0               trust
+pg_ctl restart -D /var/lib/pgsql/10/data
+
+
+
+
+
+
+
+systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。
+启动一个服务：systemctl start firewalld.service
+关闭一个服务：systemctl stop firewalld.service
+重启一个服务：systemctl restart firewalld.service
+显示一个服务的状态：systemctl status firewalld.service
+在开机时启用一个服务：systemctl enable firewalld.service
+在开机时禁用一个服务：systemctl disable firewalld.service
+查看服务是否开机启动：systemctl is-enabled firewalld.service
+查看已启动的服务列表：systemctl list-unit-files|grep enabled
+查看启动失败的服务列表：systemctl --failed
+
+
+
+启动： systemctl start firewalld
+查看状态： systemctl status firewalld 
+停止： systemctl disable firewalld
+禁用： systemctl stop firewalld
+
+
+
+
+接下来就是启动和关闭防火墙：
+1) 重启后生效
+     开启： chkconfig iptables on
+     关闭： chkconfig iptables off
+2) 即时生效，重启后失效
+     开启： service iptables start
+     关闭： service iptables stop
